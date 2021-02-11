@@ -3,6 +3,14 @@ console.log("testing")
 
 const STATE = ["Rock", "Paper", "Scissor"]
 
+// select btn
+const btnRock = document.querySelector(".rock")
+const btnPaper = document.querySelector(".paper")
+const btnScissor = document.querySelector(".scissor")
+
+// select container
+const container = document.querySelector("#container")
+
 // random return ‘Rock’, ‘Paper’ or ‘Scissors’
 function computerPlay() {
   const randm = Math.floor(Math.random() * STATE.length)
@@ -56,25 +64,56 @@ function playRound(playerSelection, computerSelection) {
 }
 
 // count the score and report the winner
-function game() {
-  for (let i = 0; i < 5; i++) {
-    const playerSelection = prompt("Your move:")
-    const computerSelection = computerPlay()
-    const result = playRound(playerSelection, computerSelection)
-    if (
-      result === playerSelection.toLowerCase() &&
-      computerSelection.toLowerCase() !== result
-    ) {
-      console.log(`You win! ${playerSelection} beats ${computerSelection}`)
-    } else if (
-      result === computerSelection.toLowerCase() &&
-      playerSelection.toLowerCase() !== result
-    ) {
-      console.log(`You Lose! ${computerSelection} beats ${playerSelection}`)
-    } else {
-      console.log(`It's Draw! `)
-    }
+function game(userChoice) {
+  // for (let i = 0; i < 5; i++) {
+  const playerSelection = userChoice
+  const computerSelection = computerPlay()
+  const result = playRound(playerSelection, computerSelection)
+  if (
+    result === playerSelection.toLowerCase() &&
+    computerSelection.toLowerCase() !== result
+  ) {
+    // console.log(`You win! ${playerSelection} beats ${computerSelection}`)
+    return `You win! ${playerSelection} beats ${computerSelection}`
+  } else if (
+    result === computerSelection.toLowerCase() &&
+    playerSelection.toLowerCase() !== result
+  ) {
+    // console.log(`You Lose! ${computerSelection} beats ${playerSelection}`)
+    return `You Lose! ${computerSelection} beats ${playerSelection}`
+  } else {
+    // console.log(`It's Draw! `)
+    return `It's Draw! `
   }
+  // }
 }
+
+// create anothe div for result status
+function createResult(output) {
+  const refchild = document.querySelector(".select")
+  const result = document.createElement("div")
+  result.textContent = output
+  result.setAttribute(
+    "style",
+    "font-size: 1.5rem; color: rgba(231, 20, 20, 0.822);"
+  )
+  container.insertBefore(result, refchild)
+}
+
+// Actionlisten for button
+btnRock.addEventListener("click", () => {
+  const output = game("Rock")
+  createResult(output)
+})
+
+btnScissor.addEventListener("click", () => {
+  const output = game("paper")
+  createResult(output)
+})
+
+btnPaper.addEventListener("click", () => {
+  const output = game("scissor")
+  createResult(output)
+})
 
 game()

@@ -24,6 +24,8 @@ body {
     background: rgba(22, 20, 20, 0.253);
     padding: auto 50px;
     border-radius: 10px;
+    width: 70%;
+    height: 70%;
     background-color: rgba(200, 200, 200, 0.6);
     box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.582);
 
@@ -65,15 +67,16 @@ body {
     margin: 10px;
 }
 
+.btn:hover {
+    opacity: 1;
+}
+
+
 .choices .rock {
     background: rgba(255, 166, 0, 0.473);
     font-size: 20px;
     font-weight: 700;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
-}
-
-.btn:hover {
-    opacity: 1;
 }
 
 
