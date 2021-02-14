@@ -16,7 +16,6 @@ body {
 }
 
 #container {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,11 +23,12 @@ body {
     background: rgba(22, 20, 20, 0.253);
     padding: auto 50px;
     border-radius: 10px;
-    width: 70%;
-    height: 70%;
     background-color: rgba(200, 200, 200, 0.6);
-    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.582);
+    box-shadow: 20px -20px 20px 15px rgba(0, 0, 0, 0.85);
 
+}
+#container h1 {
+    font-size: 26px;
 }
 
 .gamescreen {
@@ -58,6 +58,20 @@ body {
     justify-content: center;
     align-items: center;
     margin: 1rem auto;
+    position: relative;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.resultdisplay {
+    font-size: 1.5rem;
+    color: rgba(231, 20, 20, 0.973);
 }
 
 
@@ -65,32 +79,30 @@ body {
     width: 100px;
     height: 40px;
     margin: 10px;
+    background: rgba(57, 47, 153, 0.849);
+    font-size: 20px;
+    font-weight: 700;
+
 }
 
 .btn:hover {
-    opacity: 1;
+    opacity: 0.55;
 }
 
 
 .choices .rock {
     background: rgba(255, 166, 0, 0.473);
-    font-size: 20px;
-    font-weight: 700;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
 
 .choices .paper {
     background: rgba(216, 112, 147, 0.5);
-    font-size: 20px;
-    font-weight: 700;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
 .choices .scissor {
     background: rgba(0, 128, 128, 0.459);
-    font-size: 20px;
-    font-weight: 700;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
@@ -103,8 +115,10 @@ body {
 
 .fa-hand-rock {
     color: orange;
-    transform: rotate(90deg);
+    transform: rotate(0deg);
 }
+
 .fa-hand-scissors {
     color: teal;
+    transform: rotate(90deg);
 }
