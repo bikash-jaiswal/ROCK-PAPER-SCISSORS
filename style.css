@@ -21,14 +21,15 @@ body {
     justify-content: center;
     align-items: center;
     background: rgba(22, 20, 20, 0.253);
-    padding: auto 50px;
-    border-radius: 10px;
+    /* padding: auto 50px; */
+    /* border-radius: 10px; */
     background-color: rgba(200, 200, 200, 0.6);
     box-shadow: 20px -20px 20px 15px rgba(0, 0, 0, 0.85);
 
+
 }
 #container h1 {
-    font-size: 26px;
+    font-size: 1.5rem;
 }
 
 .gamescreen {
@@ -37,6 +38,10 @@ body {
     justify-content: center;
     align-items: center;
 }
+.gamescreen h2 {
+    padding: 0.5rem;
+}
+
 #container h2 {
     margin: 0.5rem auto;
 }
@@ -46,19 +51,24 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: auto 20px;
+    /* margin: auto 20px; */
 }
+
 .card p {
     font-size: 2rem;
     text-align: left;
 }
 
+.display_computer {
+    display: inline-block;
+}
+
+
 .choices {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem auto;
-    position: relative;
+    width: 80%;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
 .hide {
@@ -76,7 +86,7 @@ body {
 
 
 .btn {
-    width: 100px;
+    width: 90px;
     height: 40px;
     margin: 10px;
     background: rgba(57, 47, 153, 0.849);
@@ -122,3 +132,5 @@ body {
     color: teal;
     transform: rotate(90deg);
 }
+
+@media screen and(max-width: 400px) {}

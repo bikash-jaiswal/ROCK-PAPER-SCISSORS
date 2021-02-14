@@ -4,7 +4,7 @@
 
 ### Simple, game made with HTML, CSS, JS (DOM).
 
-## 🔗 Demo here: [https://bikash-jaiswal.github.io/ROCK-PAPER-SCISSORS/](https://bikash-jaiswal.github.io/ROCK-PAPER-SCISSORS/)
+## Demo here: [https://bikash-jaiswal.github.io/ROCK-PAPER-SCISSORS/](https://bikash-jaiswal.github.io/ROCK-PAPER-SCISSORS/)
 
 So, You don't have friend to play in this pendemic.
 
